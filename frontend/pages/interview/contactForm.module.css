@@ -1,0 +1,37 @@
+.container {
+    font-family: Arial, sans-serif;
+    margin: 40px auto;
+    max-width: 800px;
+    padding: 20px;
+}
+
+.instructions {
+    background-color: #f8f8f8;
+    padding: 20px;
+    border-radius: 8px;
+    margin-bottom: 30px;
+    border: 1px solid #ddd;
+    color: black;
+}
+
+.instructions h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.instructions p {
+    line-height: 1.6;
+    margin-bottom: 15px;
+}
+
+.instructions ul li {
+    color: inherit;
+    margin-bottom: 5px;
+}
+
+.instructions ul {
+    line-height: 1.6;
+    padding-left: 20px;
+    margin-bottom: 15px;
+    color: black;
+}
