@@ -1,11 +1,9 @@
-import re
 from flask import Blueprint, request, jsonify
 
 # This method is to be used for processing the data
 from ..services.contactForm import process_contact_data
 
 contact_form_blueprint = Blueprint("contactForm", __name__)
-EMAIL_REGEX = re.compile(r"[^@]+@[^@]+\.[^@]+")
 
 
 @contact_form_blueprint.route("/contactForm", methods=["GET", "POST"])
@@ -27,10 +25,10 @@ def handle_contact_form():
           - Both 'email' and 'message' fields must be present.
           - The 'email' must follow a proper email format (e.g., using regex or a validation library).
       - Error Handling:
-          - If the JSON payload is missing or required fields are absent, return a JSON error response with a 400 status code.
-          - If the email format is invalid, return a JSON error response with a 400 status code.
+          - If the JSON payload is missing or required fields are absent, return a JSON error response with the associated status code.
+          - If the email format is invalid, return a JSON error response with the associated status code.
       - Successful Submission:
-          - Upon valid input, process the data (e.g., save to a database, send an email, etc.).
+          - Upon valid input, process the data (use function given).
           - Return a JSON response: {"message": "Contact form submitted successfully!"} with a 200 status code.
 
     Implementation Notes:

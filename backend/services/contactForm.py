@@ -1,5 +1,14 @@
 import time
 import uuid
+import os
+import json
+
+DATA_FILE = "contact_data.json"
+
+
+def store_contact_data(data):
+    """Stores the contact data in a JSON file."""
+    raise NotImplementedError()
 
 
 def process_contact_data(data):
@@ -22,9 +31,14 @@ def process_contact_data(data):
     # Generate a unique ticket id using uuid4
     ticket_id = str(uuid.uuid4())
 
+    record = {}
+
     # Log the received data (in a real scenario, further processing would occur)
     print(f"Processing data for email: {data.get('email')}")
     print(f"Message: {data.get('message')}")
+
+    # Store the record in a JSON file
+    store_contact_data(record)
 
     # Return the simulated processing result
     return {
