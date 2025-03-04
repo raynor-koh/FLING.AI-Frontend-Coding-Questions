@@ -2,6 +2,8 @@ import React from "react";
 import styles from "./contactForm.module.css";
 
 const ContactFormTask = () => {
+    const handleSubmit = async () => {};
+
     return (
         <div className={styles.container}>
             {/* Instructions Panel */}
@@ -32,9 +34,22 @@ const ContactFormTask = () => {
                         be done on the server.
                     </li>
                 </ul>
+                <p>
+                    <strong>Test Cases</strong>
+                </p>
+                <ul>
+                    <li> Fields:</li>
+                        <ul>
+                            <li>All fields can be updated.</li>
+                        </ul>
+                    <li>Submission</li>
+                            <ul>
+                                <li>Clicking on the submit button triggers form submission</li>
+                                <li>Success alert is seen if all fields are filled during the submission</li>
+                            </ul>
+                </ul>
                 <p>Your frontend changes will be reflected below:</p>
             </div>
-
             {/* TODO: Implement Contact Form frontend here*/}
         </div>
     );
