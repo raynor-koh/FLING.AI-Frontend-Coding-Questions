@@ -28,10 +28,6 @@ const ContactFormTask = () => {
                     </li>
                     <li>Submit button containing the text "Send".</li>
                     <li>
-                        Clicking the submit button should submit the form using
-                        standard HTML.
-                    </li>
-                    <li>
                         No client-side validation is necessary; validation will
                         be done on the server.
                     </li>
